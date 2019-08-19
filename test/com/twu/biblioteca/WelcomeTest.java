@@ -19,7 +19,7 @@ public class WelcomeTest {
         welcomeMessage = new WelcomeMessage();
         welcomeMessage.printMessage();
         assertEquals(
-                "Welcome to Bangalore Public Library, we are here to help you\n",
+                "Welcome to Biblioteca. your one-stop-shop for great book titles in Bangalore!",
                 outputStream.toString()
         );
     }
