@@ -4,8 +4,8 @@ public class Movie extends Book{
 
     private int rating;
 
-    public Movie(String title, String director, int year) {
-        super(title, director, year);
+    public Movie(Integer id, String title, String director, int year) {
+        super(id, title, director, year);
     }
 
 

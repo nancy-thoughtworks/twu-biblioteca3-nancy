@@ -23,7 +23,7 @@ public class ListBooksTest {
     @Before
     public void setUp() {
         testlibrary = new Library();
-        testBook = new Book("A book", "Eleanor Goodall", 1704);
+        testBook = new Book(1,"A book", "Eleanor Goodall", 1704);
         //testMovie = new Movie("The Lion King", "J Cohen",2019 );
         testlibrary.addItems(testBook);
         //testlibrary.addItems(testMovie);

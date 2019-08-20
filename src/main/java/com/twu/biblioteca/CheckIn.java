@@ -1,20 +1,21 @@
 package com.twu.biblioteca;
 
-public class QuitOption implements MenuOption {
+import java.util.Scanner;
 
-
+public class CheckIn implements MenuOption {
     public String command() {
-        return "Q";
+        return "I";
     }
 
     public String toString() {
-        return "Quit";
+        return "Checkin";
     }
+
     public void display() {
-        System.out.print("");
+        System.out.println("Enter the item ID you wish to return");
     }
 
     public void execute(Library library) {
-        System.exit(0);
+
     }
 }

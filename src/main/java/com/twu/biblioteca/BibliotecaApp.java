@@ -12,7 +12,7 @@ public class BibliotecaApp {
         Library lib = new Library();
 
         Menu menu = new Menu(lib);
-        menu.display();
+        menu.showOptions();
 
     }
 }

@@ -11,6 +11,10 @@ public class ListOption implements MenuOption {
         return "List items";
     }
 
+    public void display() {
+        System.out.println("Available books:");
+    }
+
 
     public void execute(Library library) {
         library.listBooks();

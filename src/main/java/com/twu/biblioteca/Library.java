@@ -3,21 +3,38 @@ package com.twu.biblioteca;
 import java.util.*;
 
 public class Library {
-
-    private ArrayList<Book> items;
+    private HashMap<Integer, Book> items;
+    //private ArrayList<Book> items;
 
     public Library(){
-        this.items = new ArrayList<Book>();
+        this.items = new HashMap<Integer, Book>();
     }
 
     public void addItems(Book item){
-        items.add(item);
+        this.items.put(item.getID(), item);
     }
 
     public void listBooks(){
-        System.out.println("Available books:");
-        for (Book item : items){
-            System.out.println(item);
+
+        for (Map.Entry<Integer, Book> entry : items.entrySet()){
+            System.out.println(entry.getValue().toString());
+        }
+    }
+    public Book lookupItem(Integer id) {
+        return items.get(id);
+    }
+
+
+    public void checkOut(){
+        Scanner scanner = new Scanner(System.in);
+        int itemID = scanner.nextInt();
+        Book i = lookupItem(itemID);
+        if(i.isAvailable()){
+            i.setAvailable(false);
+            System.out.println("Thank you! Enjoy the item");
+        }
+        else{
+            System.out.println("That item is not available");
         }
     }
 
