@@ -1,14 +1,13 @@
 package com.twu.biblioteca;
 
-public class Book {
-
-    private String title;
+public abstract class Item {
+/*    private String title;
     private String author;
     private int year;
 
-    public Book(String title, String author, int year) {
+    public Item(String title, String maker, int year) {
         this.title = title;
-        this.author = author;
+        this.maker = maker;
         this.year = year;
     }
 
@@ -18,9 +17,9 @@ public class Book {
 
     public String toString() {
         return this.title + ", " +
-                this.author + ", " +
+                this.maker + ", " +
                 this.year;
+    }*/
+
+
     }
-
-
-}

@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import java.util.*;
+
 public class Library {
 
     private ArrayList<Book> items;
@@ -8,16 +10,14 @@ public class Library {
         this.items = new ArrayList<Book>();
     }
 
-    public void addItems(Book... libraryItemsToAdd){
-        for(Book item : libraryItemsToAdd){
-            items.add(item);
-        }
+    public void addItems(Book item){
+        items.add(item);
     }
 
     public void listBooks(){
         System.out.println("Available books:");
-        for (Book item : books()){
-            System.out.println(item.getDetails());
+        for (Book item : items){
+            System.out.println(item);
         }
     }
 
