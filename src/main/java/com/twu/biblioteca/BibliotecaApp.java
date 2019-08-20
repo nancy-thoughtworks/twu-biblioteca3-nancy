@@ -19,6 +19,8 @@ public class BibliotecaApp {
         library.addItems(book1);
         library.addItems(m1);
 
+        library.createUser("111-1111", new Borrower("111-1111", "mmm","john doe","alskdj@jfdl.com", 4848444));
+
 
         LoginMenu loginM = new LoginMenu(library);
         while (loginM.showLogin()) {
