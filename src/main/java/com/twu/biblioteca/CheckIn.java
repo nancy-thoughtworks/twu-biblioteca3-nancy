@@ -16,6 +16,7 @@ public class CheckIn implements MenuOption {
     }
 
     public void execute(Library library) {
+        library.checkIn();
 
     }
 }

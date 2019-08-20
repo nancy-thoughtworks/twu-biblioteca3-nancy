@@ -10,6 +10,7 @@ public class QuitOption implements MenuOption {
     public String toString() {
         return "Quit";
     }
+
     public void display() {
         System.out.print("");
     }

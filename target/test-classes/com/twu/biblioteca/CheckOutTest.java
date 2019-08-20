@@ -17,7 +17,7 @@ public class CheckOutTest {
     }
 
     @Test
-    public void canRun(){
+    public void callCheckOut(){
         Library library = mock(Library.class);
         checkout.execute(library);
         verify(library, times(1)).checkOut();

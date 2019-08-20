@@ -38,5 +38,17 @@ public class Library {
         }
     }
 
+    public void checkIn(){
+        Scanner scanner = new Scanner(System.in);
+        int itemID = scanner.nextInt();
+        Book i = lookupItem(itemID);
+        if (i!=null && !i.isAvailable()) {
+            i.setAvailable(true);
+            System.out.println( "Thank you for returning the book");
+        } else {
+            System.out.println( "That is not a valid book to return");
+        }
+    }
+
 
 }
