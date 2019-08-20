@@ -5,9 +5,11 @@ import java.util.*;
 public class Library {
     private HashMap<Integer, Book> items;
     //private ArrayList<Book> items;
+    private HashMap<String, User> users;
 
     public Library(){
         this.items = new HashMap<Integer, Book>();
+        this.users = new HashMap<String, User>();
     }
 
     public void addItems(Book item){
@@ -24,6 +26,22 @@ public class Library {
     }
     public Book lookupItem(Integer id) {
         return items.get(id);
+    }
+
+    public void createUser(String username, User user) {
+        this.users.put(username, user);
+    }
+
+    private User lookupUser(String username) {
+        return users.get(username);
+    }
+
+    public boolean login(String username, String password) {
+        User u = lookupUser(username);
+        if (u!=null) {
+            return u.authenticate(username, password);
+        } return false;
+
     }
 
 

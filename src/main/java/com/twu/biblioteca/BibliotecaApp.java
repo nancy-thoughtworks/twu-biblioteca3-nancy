@@ -20,14 +20,27 @@ public class BibliotecaApp {
         library.addItems(m1);
 
 
-        while(true) {
+        LoginMenu loginM = new LoginMenu(library);
+        while (loginM.showLogin()) {
+            while(true) {
+                Menu menu = new Menu(library);
+                menu.showOptions();
+                Scanner scanner = new Scanner(System.in);
+                String userInput = scanner.nextLine();
+
+                menu.chooseOption(userInput);
+            }
+
+        }
+
+/*        while(true) {
             Menu menu = new Menu(library);
             menu.showOptions();
             Scanner scanner = new Scanner(System.in);
             String userInput = scanner.nextLine();
 
             menu.chooseOption(userInput);
-        }
+        }*/
 
     }
 }
