@@ -31,9 +31,10 @@ public class Book {
     }
 
     public String toString() {
-        return this.title + ", " +
-                this.author + ", " +
-                this.year;
+        return this.id + ", "
+                + this.title + ", "
+                + this.author + ", "
+                + this.year;
     }
 
 

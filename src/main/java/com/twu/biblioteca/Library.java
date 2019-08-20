@@ -17,7 +17,9 @@ public class Library {
     public void listBooks(){
 
         for (Map.Entry<Integer, Book> entry : items.entrySet()){
-            System.out.println(entry.getValue().toString());
+            if (entry.getValue().isAvailable()) {
+                System.out.println(entry.getValue().toString());
+            }
         }
     }
     public Book lookupItem(Integer id) {
