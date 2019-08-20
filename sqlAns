@@ -1,0 +1,9 @@
+1) Anand Beck
+2) 37
+3) books 2, 6-10
+4)
+INSERT into book VALUES
+   ...> (11, "The Pragmatic Programmer");
+INSERT INTO member VALUES
+   ...> (43, “my name“);
+5)Anand Beck, Frank Smith

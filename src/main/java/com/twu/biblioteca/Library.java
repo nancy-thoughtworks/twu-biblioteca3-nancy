@@ -51,6 +51,7 @@ public class Library {
         Book i = lookupItem(itemID);
         if(i.isAvailable()){
             i.setAvailable(false);
+            i.setBorrower();
             System.out.println("Thank you! Enjoy the item");
         }
         else{

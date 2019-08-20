@@ -26,6 +26,7 @@ public class Book {
         return available;
     }
 
+
     public void setAvailable(boolean value) {
         this.available = value;
     }
