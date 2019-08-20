@@ -9,6 +9,10 @@ public class BibliotecaApp {
     public static void run() {
         WelcomeMessage msg = new WelcomeMessage();
         msg.printMessage();
+        Library lib = new Library();
+
+        Menu menu = new Menu(lib);
+        menu.display();
 
     }
 }
